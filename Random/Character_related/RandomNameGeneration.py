@@ -4,7 +4,10 @@ import os
 import sys, getopt
 
 dictionary = {
+    '20':'20th-Century-Modern',
     'AA':'African-American',
+    'AM':'Arabic-Muslim',
+    'CH':'Chinese',
 } 
 
 def generateNames(first, surn, gender, number):
@@ -56,7 +59,8 @@ def main(argv):
             -n      number of names that will be generated. Default is set to 10.
 
             options 
-                AA - African-American
+                20 - 20th century American-English names
+                AA - African-American                
             """)
             sys.exit(0)
         if opt == '-f':
