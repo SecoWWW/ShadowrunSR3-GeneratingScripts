@@ -29,6 +29,9 @@ dictionary = {
     'WE':['Welsh', 'Dual']
 } 
 
+def getPossibleEthnicities():
+    return list(dictionary.keys())
+
 class NamesFiles:
     def __init__(self, first, surname):
         self.male = 'Datasets/First_Names/' + dictionary[first][0] + '-M.txt'
@@ -208,7 +211,9 @@ def generateNames(first: str, surn: str, gender: str, number: int):
                     result.append(constructMultipleLongName(lists.firstFemaleList, lists.firstFemaleLen, lists.surnameFemaleList, lists.surnameFemaleLen, lists.patronymicFemaleList, lists.patronymicFemaleLen))
     return result
 
-
+def generateName(first: str, surn: str, gender: str):
+    return generateNames(first, surn, gender, 1)[0]
+    
 
 
 def main(argv):
